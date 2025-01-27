@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Toggle Background Color Button -->
+        <button id="toggleColorBtn">Toggle Background Color</button>
+
+        <!-- Slider for Text Size -->
+        <div>
+            <label for="textSizeSlider">Adjust Text Size:</label>
+            <input type="range" id="textSizeSlider" min="10" max="50" value="20">
+            <span id="textSizeValue">20px</span>
+        </div>
+
+        <!-- Modal Section -->
+        <button id="openModalBtn">Open Modal</button>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="closeModalBtn">&times;</span>
+                <p>This is a modal!</p>
+            </div>
+        </div>
+
+        <!-- Form with Validation -->
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <div id="nameError" class="error"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div id="emailError" class="error"></div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div id="passwordError" class="error"></div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Dropdown Menu -->
+        <select id="dropdown" onchange="displayMessage()">
+            <option value="">Select an option</option>
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+        </select>
+        <p id="dropdownMessage"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
